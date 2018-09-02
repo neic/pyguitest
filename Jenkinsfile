@@ -14,12 +14,13 @@ pipeline {
         stage('Deliver') {
             agent {
                 docker {
-                    image 'cdrx/pyinstaller-linux:python3'
+                    image 'python:3.6'
                 }
             }
             steps {
                 sh 'pip install pipenv'
-                sh 'pipenv install'
+                sh 'pipenv install --system --deploy'
+                sh 'pipenv install --system --deploy pyinstaller'
                 sh 'pyinstaller --onefile main.py'
             }
             post {
