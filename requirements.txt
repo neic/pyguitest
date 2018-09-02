@@ -1,0 +1,7 @@
+-i https://pypi.org/simple
+altgraph==0.16.1
+future==0.16.0
+macholib==1.11
+pefile==2018.8.8
+pyinstaller==3.3.1
+pyside2==5.11.1
