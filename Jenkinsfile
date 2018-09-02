@@ -18,8 +18,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'pipenv install --system --deploy'
-                sh 'pipenv install --system pyinstaller'
+                sh 'pipenv install --deploy'
+                sh 'pipenv install pyinstaller'
                 sh 'pyinstaller --onefile main.py'
             }
             post {
