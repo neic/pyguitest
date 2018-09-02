@@ -17,6 +17,11 @@ pipeline {
                     image 'cdrx/pyinstaller-linux:python3'
                 }
             }
+            steps {
+                sh 'pip install pipenv'
+                sh 'pipenv install'
+                sh 'pyinstaller --onefile main.py'
+            }
             post {
                 success {
                     archiveArtifacts 'dist/main'
