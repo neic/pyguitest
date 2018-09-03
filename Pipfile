@@ -9,6 +9,7 @@ name = "pypi"
 [dev-packages]
 pyinstaller = "*"
 black = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.6"
