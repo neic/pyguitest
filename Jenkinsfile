@@ -6,6 +6,11 @@ pipeline {
                 sh 'python -m py_compile main.py'
             }
         }
+        stage('Formatting') {
+            steps {
+                sh 'black --check .'
+            }
+        }
         stage('Test') {
             steps {
                 sh 'pytest --verbose --junit-xml test-reports/results.xml test.py'
