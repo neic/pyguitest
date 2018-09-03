@@ -6,8 +6,7 @@ COPY Pipfile* /app/
 
 RUN pip install pipenv
 
-RUN pipenv install --system --deploy
-RUN pipenv install pyinstaller
+RUN pipenv install --system --deploy --dev
 
 COPY . /app
 
