@@ -9,5 +9,6 @@ class TestMyFun(unittest.TestCase):
     def test_False(self):
         self.assertFalse(False)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
