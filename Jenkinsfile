@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Formatting') {
             steps {
-                sh 'black --check .'
+                sh 'black --check --diff .'
             }
         }
         stage('Test') {
