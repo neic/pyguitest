@@ -1,0 +1,4 @@
+build_image:
+  script:
+    - docker build -t pyguitest .
+    - docker run pyguitest pytest --verbose test.py
